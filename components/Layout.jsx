@@ -9,6 +9,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { AddCircleOutlineOutlined, SubjectOutlined } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
+import { AppBar, Toolbar } from '@mui/material';
 export default function Layout(props) {
   const navigate = useNavigate()
   const menuItem = [
@@ -25,6 +26,21 @@ export default function Layout(props) {
   return (
     <div className='flex-container'>
         {/* App Bar */}
+        <AppBar
+        sx={{width:'calc(100% - 240px)',backgroundColor:'#0152ea'}}
+        elevation={6}
+        >
+          <Toolbar>
+            <Typography>
+              Welcome to the Ninja Notes Websites
+            </Typography>
+            <div style={{position:'absolute',right:'10px',marginTop:'auto'}}>
+            <Typography>
+              Aditya
+            </Typography>
+            </div>
+          </Toolbar>
+        </AppBar>
         {/* Side drawer */}
         <Drawer
         sx={{
@@ -41,10 +57,10 @@ export default function Layout(props) {
             <List>
               {menuItem.map((item,index)=>{
                 return(
-                <ListItem key={index} onClick={()=>{
+                <ListItem button key={index} onClick={()=>{
                   navigate(item.path)
                 }}>
-                  <ListItemIcon>{item.icon}</ListItemIcon>
+                  <ListItemIcon sx={{color:'red'}}>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text}/>
                 </ListItem>
               )

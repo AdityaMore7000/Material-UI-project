@@ -7,16 +7,16 @@
       "id": 2
     },
     {
-      "title": "WEB DEV",
-      "details": "Complete Material UI and also deploy project",
-      "category": "work",
-      "id": 3
-    },
-    {
       "title": "Academics",
       "details": "Write notes in NTBK",
       "category": "work",
       "id": 4
+    },
+    {
+      "title": "Aditya",
+      "details": "More",
+      "category": "money",
+      "id": 5
     }
   ]
 }
